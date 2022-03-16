@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 연습5</title>
+    <style>
+        .menu {
+            border: 1px #d0d0d0 solid;
+            width: 30%; /*100%*/
+            min-width: 185px; /*max-width: 400px;*/
+        }
+        .list-line {border-bottom: 1px #333 dashed;}
+    </style>
+</head>
+<body>
+    <h1>나의 좌우명</h1>
+    <p>할 수 있다고 생각하면 할 수 있다.</p>
+    <hr>
+    <h3>회사 소개 메뉴</h3>
+    <ul type="disc" class="menu">
+        <li>회사 소개
+            <ul type="circle">
+                <li class="list-line">CEO인사말</li>
+                <li class="list-line">조직도</li>
+                <li class="list-line">연혁</li>
+            </ul>
+        </li>
+        <br>
+        <li>제품소개
+            <ul type="circle">
+                <li > KP계열 </li>
+                <li> GR계열 </li>
+                <li> CR계열 </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
