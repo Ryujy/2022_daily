@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남도맛기행 축제</title>
+    <link href="/web01/css/style.css" type="text/css" rel="stylesheet">
+    <script src="./js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="./images/logo.jpg" alt="남도맛기행 축제"></a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#">협회소개</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">명인</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">행사안내</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">요리경연대회</a></li>
+                                <li><a href="#">전시참가</a></li>
+                                <li><a href="#">참가 신청</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">홍보마당</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">축제소식</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">레시피</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">회원마당</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Q&amp;A</a></li>
+                                <li><a href="#">사진갤러리</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="cont">
+            <!-- slide -->
+            <div id="imgslide" class="all">
+                <div class="imgbox">
+                    <ul class="slide"><li><img src="./images/slide01.jpg" alt="떠나요! 남도맛기행! 광주/전남의 관광명소의 맛집투어 축제와 함께해요!"></li><li><img src="./images/slide02.jpg" alt=""></li><li><img src="./images/slide03.jpg" alt=""></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contents">
+        <!-- 탭 메뉴 -->
+        <div class="tab">
+            <ul>
+                <li data-id="con1" class="on">공지사항</li>
+                <li data-id="con2">갤러리</li>       
+            </ul>
+            <!-- 공지사항 -->
+            <div id="con1" class="conBox on">
+                <table class="table">
+                    <tr>
+                        <td><a href="#" onclick="modalpop()">전남 여행 UCC 공모전 변경 공고</a></td>
+                        <td>2022.03.22</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2022 전라남도 관광사진 공모전 공고</a></td>
+                        <td>2022.03.22</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2022년 남도한바퀴 운행 안내</a></td>
+                        <td>2022.03.22</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">전남 여행 UCC 공모전 변경 공고</a></td>
+                        <td>2022.03.22</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">전남 여행 UCC 공모전 변경 공고</a></td>
+                        <td>2022.03.22</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 팝업 레이어 -->
+            <div id="modal">
+                <div class="body">
+                    <div class="modal_img">
+                        <img src="./images/logo.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p><strong>“꽃길 따라 물길 따라 섬진강 매화여행”</strong></p>
+                        <p>- 해마다 3월이 되면 광양시 다압면 섬진강변은 산과 밭, 능선에 100만여그루(30만여평) 매화나무가 꽃망울을 터트리며 
+                            남도의 봄소식을 가장 먼저 알리는 새하얀 매화로 눈부시다.</p>
+                        <p>- 광양 매화마을은 80년 전 심기 시작한 매화가 군락지를 이루면서 3대에 걸쳐 매화를 가꾸어 온 홍쌍리 명인의 혼이
+                            2,500여개의 전통 옹기와 함께 이어져 내려오며, 최근에는 계절마다 맥문동, 구절초 등 야생화가 활짝 피어 사계절 관광지로 
+                           각광받고 있으며 영화 촬영지로도 인기가 좋다.</p>
+                    </div>
+                    <div class="button">
+                        <button type="button" id="btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 팝업 레이어 -->
+            <!-- 팝업 레이어 -->
+            <!-- 갤러리 -->
+            <div id="con2" class="conBox">
+                <ul class="gall">
+                    <li><a href="#"><img src="./images/con-img1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/con-img2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/con-img3.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 배너 영역 -->
+        <div id="banner">
+            <a href="#"><img src="./images/banner.jpg" alt=""></a>
+        </div>
+        <!-- 바로가기 -->
+        <div id="quick">
+            <a href="#"><img src="./images/quick.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!-- footer -->
+    <footer>
+        <div id="footer_logo"><a href="#"><img src="./images/footer_logo.png" alt=""></a></div>
+        <div id="footer_cont">
+            <div class="global">
+                <a href="#">개인정보처리방침</a>   |
+                <a href="#">저작권정책</a>   |
+                <a href="#">이메일 무단수집거부</a>   |
+                <a href="#">찾아오시는 길</a>   |
+            </div>
+            <div class="copy">
+                (우)58564 전라남도 무안군 삼향읍 오룡길 1 전라남도 관광과 Tel 061)286-5245 <br>
+                    전라남도(관광정보센터) 061)286-4052, 061)285-9045<br>
+                    Copyright © 2022 BY jeollanamdo. all rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
