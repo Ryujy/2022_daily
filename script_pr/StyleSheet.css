@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; font-family: 'Times New Roman', serif;}
+li {list-style: none;}
+a {text-decoration: none;}
+
+html {
+    /* 크기 설정 */
+    height: 100%; overflow: hidden;
+
+    /* 배경 - 이미지 설정 */
+    background: url('Images/Background.png');
+    background-size: cover;
+}
+
+body {
+    /* 위치 선정 */
+    position: absolute; top: 50%; left: 50%;
+    width: 960px; height: 550px;
+    margin-left: -480px;
+    margin-top: -275px;
+
+    /* 이미지 설정 */
+    background: url('Images/Center_Background.png');
+}
+
+#container {height: 500px;}
+
+#main_navigation > ul {overflow: hidden;}
+#main_navigation > ul > li {float: left;}
+#main_navigation > ul > li > a {
+    /* 크기 설정 */
+    display: block;
+    width: 240px; height: 50px; line-height: 50px;
+
+    /* 이미지 설정 및 글자 가리기 */
+    text-indent: -9999px;
+    background: url('Images/Navigation_Button.png');
+}
+
+#main_navigation > ul > li:nth-child(1) > a {background-position: 0px 0px;}
+#main_navigation > ul > li:nth-child(2) > a {background-position: 0px -100px;}
+#main_navigation > ul > li:nth-child(3) > a {background-position: 0px -200px;}
+#main_navigation > ul > li:nth-child(4) > a {background-position: 0px -300px;}
+
+#main_navigation > ul > li:nth-child(1) > a:hover {background-position: 0px -50px;}
+#main_navigation > ul > li:nth-child(2) > a:hover {background-position: 0px -150px;}
+#main_navigation > ul > li:nth-child(3) > a:hover {background-position: 0px -250px;}
+#main_navigation > ul > li:nth-child(4) > a:hover {background-position: 0px -350px;}
+
+#title{
+    /* 위치 선정 */
+    position: absolute;
+    left: 0; top: -48px;
+
+    /* 크기 설정 */
+    width: 240px; height: 48px; 
+    overflow: hidden;
+}
+
+#title > h1 {
+        /* 위치 선정 */
+        position: absolute;
+        left: 0; top: 48px;
+
+        /* 크기 설정 */
+        width: 240px; height: 48px; 
+
+        /* 이미지 설정 및 글자 가리기 */
+        background: url('Images/Title_Images.png');
+        text-indent: -9999px;
+
+        /* 애니메이션 설정 */
+        transition-duration: 1s;
+}
+#title > h1.active {top: 0;}
+#title > h1:nth-child(1) {background-position: 0px 0px;}
+#title > h1:nth-child(2) {background-position: 0px -48px;}
+#title > h1:nth-child(3) {background-position: 0px -96px;}
+
+#container {
+    position: relative;
+    /* 내부 그림이 좌우로 잘리는 것 방지 */
+    width: 100%; padding: 0 40px; margin-left: -40px;
+    height: 500px; overflow: hidden;
+}
+
+div[data-name] {
+    /* 위치 설정 */
+    position: absolute;
+    left: 40px; top: 550px;
+    /* 크기 설정 */
+    width: 960px; height: 500px;
+    /* 애니메이션 설정 */
+    transition-duration: 2s;
+}
+
+div[data-name].active {top: 0;}
+
+div[data-name=main] > img {
+    position: absolute; left: -50px; bottom: 0;
+}
+
+div[data-name=information] > img {
+    position: absolute; left: 20px; top: 20;
+}
+div[data-name=information] > div {
+    position: absolute; left: 450px; top: 30;
+    width: 480px;
+}
+div[data-name=multimedia] {padding: 20px;}
+
+div[data-name=character] > a {
+    display: block; width: 40px; height: 40px;
+    text-indent: -9999px;
+    background: url('Images/Arrow_Images.png');
+}
+div[data-name=character] > a:nth-child(1) {
+    background-position: 0px 0px;
+    position: absolute; left: 10px; top: 50%; margin-top: -20px;
+}
+div[data-name=character] > a:nth-child(2) {
+    background-position: 0px -40px;
+    position: absolute; left: 10px; top: 50%; margin-top: -20px;
+}

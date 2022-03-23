@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>후손 / 자손 선택자 / 반응 선택자</title>
+        <style>
+            /* 후손 선택자 - 직계아니어도 됨 */
+            #header h1{color: red;}
+            #section h1{color: orange;}
+
+            /* 자손 선택자 - 직계
+            #header > h1 {color: red;} /*Lorem Ipsum 적용
+            /* #header > #nav > h1 {color: blueviolet;} Navigation 적용
+            #section > h1 {color: orange;} /*밑에 Lorem Ipsum 적용 */
+
+            /* 반응선택자 */
+            /* 마우스를 올릴 경우 */
+            #header h1:hover {color: black;}
+            /* 마우스를 클릭했을 경우 */
+            #header h1:active {color: blue;}
+
+            button {
+                color: white; 
+                width: 200px; 
+                height: 40px; 
+                line-height: 40px; 
+                background: red; 
+                border-radius: 20px;
+                border: 0;
+            }
+            button:hover {background: #333;}
+            button:active {color: red; background: antiquewhite;}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Lorem Ipsum</h1>
+            <div id="nav">
+                <h1>Navigation</h1>
+            </div>
+        </div>
+        <div id="section">
+            <h1 class="title">Lorem Ipsum</h1>
+            <p>What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+        </div>
+        <button>여기를 누르세요.</button>
+    </body>
+</html>

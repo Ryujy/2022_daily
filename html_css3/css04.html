@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상태 선택자</title>
+    <style>
+        input:enabled {background: #fff;}
+
+        input:disabled {background: grey;}
+
+        input:focus {background: orange;}
+
+        /* check박스 선택시 div 높이가 0px이 되도록 */
+        input[type=checkbox]:checked + div{
+            height: 0px;
+        }
+        div {
+            overflow: hidden;
+            width: 650px;
+            height: 300px;
+
+            /* 변환효과 적용 */
+            transition-duration: 1s;
+            /* 변환효과 적용 - 모든 웹에서 적용되도록 설정하려면 필요한 것 (모바일, 사파리, 파이어폭스 등에서 모두 되도록) */
+            -ms-transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h2>enabled</h2>
+    <input>
+    <h2>disabled</h2>
+    <input disabled="disabled">
+    <hr>
+    <input type="checkbox">
+    <div>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+    </div>
+</body>
+</html>

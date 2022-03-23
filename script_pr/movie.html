@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로마의 휴일</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js">
+        $(document).ready(function () {
+            // 내비게이션 버튼
+            $('#main_navigation a').click( function() {
+                // 변수 선언
+                var target = $(this).attr('data-target');
+
+                // 클래스 적용
+                $(':not([data-name=' + target + ']').removeClass('active')
+                $('[data-name=' + target + ']').addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <hgroup id="title">
+        <h1 data-name="information">information</h1>
+        <h1 data-name="Character">Character</h1>
+        <h1 data-name="multimedia">Multimedia</h1>
+    </hgroup>
+    <section id="container">
+        <!-- main page -->
+        <div id="main" data-name="main" class="active">
+            <img src="Images/Middle_Foreground.png">
+        </div>
+        <!-- information -->
+        <div id="information" data-name="information">
+            <img src="Images/Information_Image.png">
+            <div class="description">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+            </div>
+        </div>
+        <!-- character page -->
+        <div id="character" data-name="character">
+            <a href="#">Left Button</a>
+            <a href="#">Right Button</a>
+            <article class="show">
+                <h1>Princess Ann</h1>
+                <img src="Images/Character_Text_1.png" alt="">
+                <img src="Images/Character_1.png" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </article>
+            <article>
+                <h1>Joe Bradley</h1>
+                <img src="Images/Character_Text_2.png" alt="">
+                <img src="Images/Character_2.png" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </article>
+            <article>
+                <h1>Radovich</h1>
+                <img src="Images/Character_Text_3.png" alt="">
+                <img src="Images/Character_3.png" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </article>
+        </div>
+        <!-- 영상 페이지 -->
+        <div id="multimedia" data-name="multimedia">
+            <video width="940" height="480" controls="controls"></video>
+        </div>
+    </section>
+    <nav id="main_navigation">
+        <ul>
+            <li><a href="#" data-target="information">Movie Info</a></li>
+            <li><a href="#" data-target="multimedia">Multimedia</a></li>
+            <li><a href="#" data-target="character">Character</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

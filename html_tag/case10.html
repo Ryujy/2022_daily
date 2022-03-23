@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 연습 10</title>
+    <style>
+        img {
+            width:50%; /*세로는 자동*/
+            border-radius: 120px;
+            display: block;
+            margin: 0 auto; /*상하값 0 좌우값 자동 <- 이게 적용되려면 display:block*/
+        }
+        .popup{
+            border:3px solid #001; 
+            width:300px; height:300px; 
+            position:fixed; 
+            z-index:1000; 
+            display:bolck; 
+            right:30px;
+            top:20px;
+            background-color: #fff;
+        }
+        img {width:50%;}
+        a:hover img{width:100%;}
+    </style>
+</head>
+<body>
+    <h1>&lt;div&gt;태그</h1>
+    <p>본문 안 영역 지정 구분</p>
+    <hr>
+    <div style="border:3px solid #001; width:300px; height:1100px;">
+        div 첫 번째 영역입니다.
+        <div style="border:0.5px dotted #006; width:250px; height:50px;">
+            첫 번째 div 안에 있는 또 다른 영역입니다.
+        </div>
+    </div>
+    <p>HTML 완전 재미있죠?</p>
+    <div>
+        <a href="#">
+            <img src="images/eagle.jpg">
+        </a>
+    </div>
+    <!--팝업 창-->
+    <div class="popup">
+        div 두 번째 영역입니다.
+        <div style="border:0.5px dotted #006; width:250px; height:50px;">
+            두 번째 div 안에 있는 또 다른 영역입니다.
+        </div>
+    </div>
+</body>
+</html>

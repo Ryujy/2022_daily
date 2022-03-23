@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: o;}
+        html, body {height: 100%; overflow: hidden; background: #141414;}
+
+        .image {
+            /* 태그 중앙 정렬 */
+            width: 100px; height: 60px;
+            position: absolute; 
+            left: 0; top: 0;
+
+            /* 모양 지정 */
+            border: 3px solid #fff;
+            box-sizing: border-box;
+            background: url('http://via.placeholder.com/100x60');
+            background-size: 100% 100%;
+        }
+
+        #viewport {
+            transform-style: preserve-3d;
+            -webkit-perspective: 2000px;
+            perspective: 2000px;
+            position: relative;
+            transform: rotateX(-10deg);
+        }
+
+        #image_gallery {
+            width: 100px; height: 60px;
+            transform-style: preserve-3d;
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -50px; /* ??? 03-21 pm3:27*/ 
+            margin-top: -30px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready (function (){
+            // div 태그를 생성합니다.
+            for (var i = 0; i < 200; i++) {
+                // 변수 선언
+                var output = '';
+                output += 'rotateY(' + i * 20 + 'deg)';
+                output += 'translateY(' + i * 5 + 'px)';
+                output += 'translateZ(' + 310 + 'px)';
+                // 태그 생성
+                $('<div></div>').addClass('image').css({
+                    'width': 100,
+                    'height' : 60,
+                    'transform' : output
+                }).appendTo('#image_gallery')
+            };
+            // 변수를 선언합니다.
+            var isMouseDown = false;
+            var originalPosition = {X: 0, Y: 0};
+            var originalRotation = {X: 0, Y: 0, Z: 0};
+            var originalScale = 1.0;
+            var createGalleryPosition = function() {
+                var output = '';
+                output += 'translateY(' + originalPosition.Y + 'px)';
+                output += 'rotateY(' + originalRotation.Y + 'deg)';
+                return output;
+            };
+            var createViewportPosition = function() {
+                var output = '';
+                output += 'rotateX(-10deg)';
+                output += 'scaleX(' + originalScale + ')';
+                output += 'scaleY(' + originalScale + ')';
+                return output;
+            };
+            // 이벤트를 연결합니다.
+            $(window).on ({
+                mousedown: function (event) {
+                    //마우스가 드래그 중임을 알림
+                    isMouseDown = true;
+                    //마우스 위치 저장
+                    originalPosition.X = event.screenX;
+                    //디폴트 이벤트 제거
+                    event.preventDefault();
+                },
+                mouseup: function (event) {
+                    //마우스 드래그 해제
+                    isMouseDown = false;
+                    //디폴트 이벤트 제거
+                    event.preventDefault();
+                },
+                mousemove: function (event) {
+                    //마우스를 드래그 중일 때
+                    if (isMouseDown) {
+                        //마우스 이동거리 구하기
+                        distance = event.screenX - originalPosition.X;
+                        originalRotation.Y += distance;
+                        originalPosition.Y += distance / 3;
+                        //스타일 적용
+                        $('#image_gallery').css('transform', createGalleryPosition());
+                        $('#viewport').css('transform', createGalleryPosition());
+                        //마우스 위치 저장
+                        originalPosition.X = event.screenX;
+                    }
+                    //디폴트 이벤트 제거
+                    event.preventDefault();
+                },
+                mousewheel: function (event) {
+                    //변경된 휠 크기를 사용해 크기 구하기
+                    var changeScale = originalScale + event.originalEvent.wheelDeltaY / 1000;
+                    //음수 크기가 나오지 않게
+                    if (changeScale > 0) {
+                        //크기를 변경합니다.
+                        originalScale = changeScale;
+                        //객체에 스타일 적용
+                        $('#image_gallery').css('transform', createGalleryPosition());
+                        $('#viewport').css('transform', createViewportPosition());
+                    //디폴트 이벤트 제거
+                    event.preventDefault();
+                    }
+                    
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="viewport">
+        <div id="image_gallery">
+
+        </div>
+    </div>
+</body>
+</html>

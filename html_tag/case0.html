@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            span {color: #cc0000; font-weight: bold;}
+        </style>
+        <!-- style태그는 css에 해당하는 명령문 -->
+        <!-- 여기서부터 본문입니다. 이것은 주석처리~! -->
+        <title>3.14 html</title>
+    </head>
+
+    <body>
+        <p>HTML 기본 규칙</p> 
+        <p> 일부 요소는 빈요소 태그</p>
+        <hr> 가로선 <br>줄바꿈
+        <p>태그, 요소(=element), 속성</p>
+        <P>태그 사용할 때 체계적으로 정의를 해놓고 사용해야 나중에 CSS에서 선택자(Selector)로 사용하기 편리</P>
+        <hr><br>
+
+        <span>- 여행가이드에 오신 것을 환영합니다. -</span>
+
+        <hr><br>
+
+        <p>html문서의 기본구조 <br>
+            html - head - body 태그가 순서대로 나옴
+            head에 들어있는 내용, 키워드, 메타데이터 등이 구글 검색 상위 노출에 영향을 줌
+        </p>
+
+        <hr /><br />
+        <font size="6"><b>Hello - 검색엔진에서 그냥 문장임</b></font> <!--빨간색표시태그는 가급적 사용x-->
+        <h1>Hello - 검색엔진에서 대타이틀로 인지됨</h1>
+        <h2>시멘틱 태그 <br>
+            : 시멘틱 웹을 지원하기 위한 태그로 브라우저, 검색엔진, 개발자 모두에게 콘텐츠의 의미(ex.대타이틀)를 명확히 설명하는 역할
+        </h2>
+        <header>head영역과 다름. 헤더는 보통 도입부에 해당하는 콘텐츠나 네비게이션 링크의 집합 등과 같은 정보 포함</header>
+        <nav> 다른 부분과 연결되는 네비게이션 링크들의 집합을 정의할 때 사용</nav>
+        <section>ex)마블 신작. HTML문서에 포함된 독립적인 섹션을 정의할 때 사용. section요소는 보통 제목요소(h1~h6)를 자식요소로 포함하고 잇는 경우가 많음</section>
+        <article>ex)DC에 관한 내용. 해당 문서 안에 돌깁적으로 구성할 수 있는 요소. section 안에</article>
+        <aside>ex)영화에 관한 내용. 페이지의 다른 콘텐츠들과 약간의 연관성을 가지고 있지만,  해당 콘텐츠들로부터 분리시킬 수 있는 콘텐츠로 구성된 페이지 영역</aside>
+        <footer>바닥글 섹션 영역을 지정. 개인정보 보호법...설명 못들음</footer>
+        <br />
+        <canvas>다양한 그래픽 표현</canvas>
+        <figure>삽화나 다이어그램, 사진 등과 같이 문서의 주요 흐름과는 독립적인 콘텐츠를 정의할 때 사용</figure>
+        <source>
+        <video></video><audio></audio></audio>
+        <embed> html이 아닌 외부 응용프로그램이나 대화형 내용을 html문서 내에 포함하는 태그
+
+        <frame>:더이상 사용하지 않음 <iframe src="https://www.google.com"></iframe><!--iframe은 아직 사용함-->
+
+        <hr />
+        <ol>리스트
+            <li>숫자 있다</li>
+        </ol>
+        <ul>리스트
+            <li>숫자 없다</li>
+        </ul>
+    </body>
+</html>
