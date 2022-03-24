@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title>js practice 01</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <style>
+        .div1 {border-radius: 10px;}
+        .hcolor-0 {color: red;}
+        .hcolor-1 {color: greenyellow;}
+        .hcolor-2 {color: orange;}
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('*').css('margin','0').css('padding','0')
+            $('div').css('float','left').css('margin','20px').css('padding','3px').css('border','5px dashed skyblue');
+            $('div:nth-child(1)').addClass('div1');
+
+            $('h1').addClass(function(index) {
+                return 'hcolor-' + index;
+            });
+
+            $('button').click(function() {
+                $(this).parent().find('img').css('border','5px solid red');
+            });
+
+            $('tr:eq(1)').css('background','yellow').css('color','black');
+            $('td:nth-child(').css('background','yellow').css('color','black');
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>java script practice</h1>
+        <h1>java script practice</h2>
+        <h1>java script practice</h1>
+    </div>
+    <div>
+        <img src="./sunglasscat.jpg" alt="">
+        <button>클릭!!</button>
+    </div>
+    <div>
+        <button>클릭!!</button>
+    </div>
+    <table>
+        <tr>
+            <th>순번</th>
+            <th>리스트</th>
+            <th>완료여부</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>남은 5분 집중하기</td>
+            <td>ing</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>집에 가기</td>
+            <td>x</td>
+        </tr>
+    </table>
+</body>
+</html>
