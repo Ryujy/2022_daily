@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery - parent() method</title>
+    <style>
+   
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+            //span 태그 부모의 background 를 red로 변경
+            //$('span').parent().css('background','red');
+
+            //버튼을 클릭하면
+            $('button').click(function() {
+                //자신의 글자 변경
+                $(this).text('비활성화하기');
+                //자신의 부모 색상 변경
+                $(this).parent().css('background','red');
+                $(this).parent().find('span').text('활성화');
+            });
+
+            //버튼 다시 활성으로 바꿔보기!
+        });
+    </script>
+    <div>
+        <span> 비활성화 </span>
+        <button> 활성화하기 </button>
+    </div>
+    <div>
+        <span> 비활성화 </span>
+        <button> 활성화하기 </button>
+    </div>
+</body>
+</html>

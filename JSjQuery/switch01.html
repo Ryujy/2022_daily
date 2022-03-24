@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> switch 조건문</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        var input = Number(prompt('숫자를 입력하세요.', '숫자'));
+
+        //switch 조건문
+        switch (input % 2) {
+            case 0:
+                alert('짝수입니다.');
+                break;
+            case 1:
+                alert('홀수입니다.');
+                break;
+            default:                            //case 0 or 1이 아닌 경우
+                alert('정수가 아닙니다.');
+                break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

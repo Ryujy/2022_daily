@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            // $('h1').css('background', 'orange').filter(':even').css('color','red')
+            // $('h1').css('background', 'orange');
+            // $('h1:even').css('color','#fff');
+            // $('h1:odd').css('color','#000');
+            //$('h1').css('background', 'orange').filter(':even').end().css('color', '#fff').end()
+            //.filter(':odd').css('color','red');
+
+            $('h1').eq(0).css('background','orange')
+            $('h1').eq(-1).css('background','pink')
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+        <h1>Header-2</h1>
+    </div>
+</body>
+</html>
+
+<!-- 
+    eq() : 특정 위치 문서 객체
+    first()
+    last()
+ -->

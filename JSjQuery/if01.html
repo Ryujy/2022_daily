@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> javascript if</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        /*
+        // if 조건문 javascript
+        if (273 > 100) {
+            // 표현식 "273 < 100"이 참일 때 실행
+            alert('273 > 100 => true');
+        }
+
+        //프로그램 종료
+        alert('종료');
+        */
+
+        //변수를 선언
+        var date = new Date();           //현재 날짜를 가져오는 것
+        var hour = date.getHours();
+
+        //if 조건문
+        if (hour < 12) {
+            // hour < 12 참일 때 실행
+            alert('오전입니다.')
+        } else {
+            alert('오후입니다.')
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h2>Header-1</h2>
+        <h1>Header-2</h1>
+        <h2>Header-3</h2>
+        <h1>Header-4</h1>
+    </div>
+</body>
+</html>

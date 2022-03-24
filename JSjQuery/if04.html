@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> if 조건문 04</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        var input = prompt('안녕하세요....!','대화');
+
+        if (input.indexOf('안녕') != -1) {      //문자열에 '안녕'이 포함되어 있지 않으면 -1을 리턴함
+            alert('안녕하세요...!');
+        } else if(input.indexOf('잘자') >= 0 || input.indexOf('잘 자') >= 0) {
+            alert('안녕히 주무세요...!')
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

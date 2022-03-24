@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> java </title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('body > div').css('color','red')
+        });
+        
+        // 속성 선택자
+        $(document).ready(function()) {
+            $('input[type="text"])
+        }
+
+        // 입력 양식 필터 선택자
+        $(document).ready(function() {
+            setTimeout(function() {
+                // 변수 선언
+                var value = $('select > option:selected').val();
+                //출력
+                alert(value)
+            }, 8000);
+        });
+
+        // 위치필터
+        $(document).ready(function() {
+            $('tr:odd').css('background', '#f9f9f9');
+            $('tr:even').css('background', '#9f9f9f');
+            $('tr:first').css('background', '#000'), ('color', "#fff")
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Apple</li>
+            <li>Bag</li>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Elephant</li>
+        </ul>
+    </div>
+    <br>
+    <input type="text">
+    <input type="password">
+    <input type="radio">
+    <inpyut type="checkbox">
+
+    <table>
+        <tr>
+            <th>홍길동</th>
+            <th>B</th>
+            <th>서울시</th>
+        </tr>
+        <tr>
+            <th>일지매</th>
+            <th>O</th>
+            <th>부산광역시</th>
+        </tr>
+        <tr>
+            <th>전우치</th>
+            <th>A형</th>
+            <th>강원도</th>
+        </tr>
+        <tr>
+            <th>유관순</th>
+            <th>O형</th>
+            <th>수원시</th>
+        </tr>
+        <tr>
+            <th>심사임당</th>
+            <th>O형</th>
+            <th>수원시</th>
+        </tr>
+        <tr>
+            <th>허난설헌</th>
+            <th>O형</th>
+            <th>수원시</th>
+        </tr>
+
+    </table>
+</body>
+</html>

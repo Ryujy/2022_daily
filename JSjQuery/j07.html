@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery 충돌방지</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $.noConflict();
+        var J = jQuery;
+        J(document).ready(function() {
+            J('h1').addClass('height')
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

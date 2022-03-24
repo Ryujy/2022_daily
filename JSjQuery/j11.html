@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery</title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            // is()메서드 : 문서 객체의 특징 판별
+            $('h1').each(function() {
+                if ( $(this).is('.select')) {
+                    $(this).css('background','orange');
+                } else if ($(this).is('.choice')) {
+                    $(this).css('background','black').css('color','orange');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="select">Header-0</h1>
+    <h1 class="choice">Header-1</h1>
+    <h1 class="select">Header-2</h1>
+</body>
+</html>

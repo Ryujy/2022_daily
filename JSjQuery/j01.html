@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> java </title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        //java script
+        window.onload = (function() {
+            alert('Hello World! - javascript')
+        });
+        
+        // jQuery
+       /* $(document).ready(function() {
+            alert('Hello World! - jQuery')
+        });
+
+        $(document).ready(function() {
+            alert('Hello World! - 2nd')
+        });
+
+        $(document).ready(function() {
+            alert('Hello World! - 3rd')
+        }); 
+        */
+
+        //태그 선택자
+        $(document).ready(function(){
+            $('p').css('color','red')
+            $('h1').css('color','orange')           
+        });
+
+        //ID 선택자
+        $(document).ready(function() {
+            $('#target').css('color', 'blue')
+        });
+
+        // class 선택자
+        $(document).ready(function() {
+            $('.item').css('color', '#fff')
+            $('h1.item').css('background', 'blue')
+            $('h1.item.select').css('color','orange')
+        });
+
+    </script>
+</head>
+<body>
+    <!-- 태그 선택자 -->
+    <h1>Lorem ipsum</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis voluptas fugiat enim, delectus iusto libero earum architecto impedit omnis veniam cumque dolor officia illo, quasi ex voluptatibus rem, qui autem?</p>
+
+    <!-- 아이디 선택자 -->
+    <h1>Header-0</h1>
+    <h1 id="target">Header-1</h1>
+    <h1>Header-2</h1>
+
+    <!-- 클래스 선택자 -->
+    <h1 class="item">Header-0</h1>
+    <h1 class="item select">Header-1</h1>
+    <h1 class="item">Header-2</h1>
+</body>
+</html>

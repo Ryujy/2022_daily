@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery </title>
+    <style>
+
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            //변수 선언
+            var object = {name: 'Hong gil dong'};
+
+            // $.extend() 메서드
+            $.extend(object, {
+                gender : 'male',
+                region : 'Guro-gu, Seoul',
+                part : 'Second Guitar'
+            });
+
+            //출력
+            var output = ''
+            $.each(object, function(key, item) {    //.extend 에서는 key , .each 에서는 index
+                output += key + ':' + item + '\n';
+            });
+            alert(output);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

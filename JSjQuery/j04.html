@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery </title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            //변수 선언
+            var array = [ //배열
+                {name: 'Goodee academy', link: 'http://gdu.co.kr'},
+                {name: 'Naver', link: 'http://naver.com'},
+                {name: 'Daum', link: 'http://daum.net'}
+            ];
+
+            //$.each 메서드 사용
+            $.each(array , function(index, item) {
+                //변수 선언
+                var output = '';
+                
+                //문자열 생성
+                output += ' <a href=" ' + item.link + ' " target="_blank" > ';
+                output += '    <h1> ' + item.name + ' </h1> ';
+                output += ' </a> '
+
+                //화면에 출력
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

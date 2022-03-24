@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery - xml</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        div {float: left; text-align: center; border: 3px solid black; margin: 10px; border-radius: 10px; padding: 20px 5px;}
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        var xml = '';
+        xml += '<friends>';
+        xml += '    <friend>';
+        xml += '        <name>연하진</name>';
+        xml += '        <language>Ruby</language>';
+        xml += '    </friend>';
+        xml += '    <friend>';
+        xml += '        <name>윤명월</name>';
+        xml += '        <language>Basic</language>';
+        xml += '    </friend>';
+        xml += '    <friend>';
+        xml += '        <name>홍길동</name>';
+        xml += '        <language>C#</language>';
+        xml += '    </friend>';
+        xml += '</friends>';  
+
+        $(document).ready(function() {
+            var xmlDoc = $.parseXML(xml)
+            $(xmlDoc).find('friend').each(function(index) {
+                //변수를 선언
+                var output = '';
+                output += '<div>';
+                output += '    <h1>' + $(this).find('name').text() + '</h1>';
+                output += '    <p>' + $(this).find('language').text() + '</p>';
+                output += '</div>';
+
+                //출력
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data="utf-8">
+    <title> jQuery </title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        // 위치 필터 선택자
+        $(document).ready(function() {
+            $('tr:eq(0)').css('background', '#000000').css('color','#ffffff');
+            $('td:nth-child(4n+1)').css('background', '#565656');
+            $('td:nth-child(4n+2)').css('background', '#a9a9a9');
+            $('td:nth-child(4n+3)').css('background', '#f9f9f9');
+            $('td:nth-child(4n)').css('background','orange');
+        });
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>혈액형</th>
+            <th>지역</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>AB형</td>
+            <td>수원시 달서구</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>일지매</td>
+            <td>O형</td>
+            <td>부산광역시 동구</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>전우치</td>
+            <td>A형</td>
+            <td>강원도 동해구</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>유관순</td>
+            <td>O형</td>
+            <td>서울시 구로구</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>심사임당</td>
+            <td>O형</td>
+            <td>미국 캘리포니아</td>
+            <td>미국 거주</td>
+        </tr>
+        <tr>
+            <td>허난설헌</td>
+            <td>B형</td>
+            <td>서울시 송파구</td>
+            <td></td>
+        </tr>
+
+    </table>
+</body>
+</html>
