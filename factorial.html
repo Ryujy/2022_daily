@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - 팩토리얼 계산기</title>
+    <style>
+        body {
+            padding-top: 50px; text-align: center;
+            font-size: 1.8em; color: blue;
+        }
+    </style>
+    <script>
+        /****** 팩토리얼 계산기 *******
+         * 특정 값부터 1까지 계속해서 곱하는 것을 말함
+         * ex) 3!은 3x2x1=6,  4!은 4x3x2x1=24
+        */
+        var n = prompt('숫자를 입력하세요.','숫자');
+        var nFact = 1;  //팩토리얼 계산 결과값 저장할 변수
+        var i = 2;      //반복문에 사용할 변수
+    
+        while (i <= n) {        //while과 for 작성 헷갈리지 않도록 주의!!
+            nFact *= i;
+            i++;
+        }
+        document.write(n + '! = ' + nFact);
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>

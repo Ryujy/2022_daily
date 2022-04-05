@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - 반복문, 출력문</title>
+    <style>
+        div {
+            display: inline-block;  /* div 안에 요소들이 오른쪽 옆으로 와서 붙네 */
+            padding: 0 20px 30px 20px; margin: 15px;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+        div h3 {text-align: center; font-weight: bold;}
+        h1 {margin: 15px;}
+    </style>
+</head>
+<body>
+<script>
+    // 자바스크립트 출력문 - 파이썬 출력문은 뭐드라? print('콜드브루 돌체라떼 맛있다.')
+    //document.write('콜드브루 돌체라떼 맛있다.')
+
+    // 반복문 - 파이썬이랑 비슷
+    document.write('<h1> 구구단 </h1>')
+    for (var i=2; i <= 9; i++) {
+        document.write('<div>');
+        document.write('<h3>' + i + '단</h3>');
+        for (var j=1; j <= 9; j++) {
+            document.write(i + ' x ' + j + ' = ' + i*j + '<br>')
+        }
+        document.write('</div>')
+    }
+</script>
+</body>
+</html>
