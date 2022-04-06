@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/PIE.js"></script>
+        <script>
+            $(function(){
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    })
+                }
+            });
+        </script>
+        <style>
+            body{min-width: 1024px;}
+        </style>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <div id="header-wrap">
+        <header class="header-inner">
+            <h1>
+                <a href="#">
+                    <p>북북라이프</p>
+                </a>
+            </h1>
+            <p class="mobile-menu-open">
+                <button>
+                    <span class="blind">메뉴 열기</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </p>
+            <div class="mobile-menu-wrap">
+                <div class="mobile-menu-scroll">
+                    <!-- <ul class="site-choice">
+                        <li><a href="#"><img src="images/common/top-tab-1-ov.jpg" alt="HTML5"></a></li>
+                        <li><a href="#"><img src="images/common/top-tab-2.jpg" alt="CSS"></a></li>
+                    </ul> -->
+                    <ul class="util-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Member</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                    <nav id="gnb">
+                        <h2 class="blind">메인메뉴</h2>
+                        <ul>
+                            <li class="m1">
+                                <a href="#">ABOUT</a>
+                                <ul>
+                                    <li><a href="#">북북라이프 소개</a></li>
+                                    <li><a href="#">Q&amp;A</a></li>
+                                    <li><a href="#">찾아오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li class="m2">
+                                <a href="#">SERVICE</a>
+                                <ul>
+                                    <li><a href="#">전체보기</a></li>
+                                    <li><a href="#">이 달의 책장</a></li>
+                                    <li><a href="#">책장 한 칸</a></li>
+                                    <li><a href="#">굿즈</a></li>
+                                    <li><a href="#">정기 배송 신청</a></li>
+                                </ul>
+                            </li>
+                            <li class="m3">
+                                <a href="#">COMMUNITY</a>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">북콘서트 신청</a></li>
+                                    <li><a href="#">독서모임</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+                            <li class="m4">
+                                <a href="#">책장 채우기</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="mobile-menu-close">
+                    <button>
+                        <span class="blind">메뉴닫기</span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </p>
+            </div>
+        </header>
+    </div>
+    <!-- // 헤더 영역-->
+    <!-- 콘테이너 영역 -->
+    <div id="container">
+        <section id="main-visual" class="rounded">
+            <h3 class="blind"></h3>
+            <ul class="main-visual-slide">
+                <li>
+                    <div class="visual-item-wrap item1">
+                        <h4 class="visual-title">4월 || 이 달의 책장 ||</h4>
+                        <p>
+                            <span>
+                                이번 달엔 어떤 도서들이 <br>
+                                북북라이프의 책장을 채웠을까.
+                            </span>
+                        </p>
+                        <p class="detail-view"><a href="#">자세히 보기</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="visual-item-wrap item2">
+                        <h4 class="visual-title">4월 || 책장 한 칸 ||</h4>
+                        <p>
+                            <span>
+                                어떤 책을 읽고 싶은지 고민된다면,<br>
+                                새로운 책을 만나는 셀렘을 느끼고 싶다면 <br>
+                                매번 다른 테마로 구성되는 책장 한 칸!
+                            </span>
+                        </p>
+                        <p class="detail-view"><a href="#">자세히 보기</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="visual-item-wrap item3">
+                        <h4 class="visual-title">북북라이프 커뮤니티</h4>
+                        <p>
+                            <span>
+                                책을 읽고 북북라이프를 통해 <br>
+                                다른 사람들과 생각을 공유해보세요.<br><br>
+                                - 북콘서트/온오프라인 독서모임 진행중 -
+                            </span>
+                        </p>
+                        <p class="detail-view"><a href="#">자세히 보기</a></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="notice-tab-wrap" class="rounded">
+            <h3 class="sec-tit-1">NOTICE &amp; NEWS</h3>
+            <h4 class="tab-btn-1"><a href="#" class="on">북라콘서트</a></h4>
+            <div class="tab-container-1">
+                <p class="no-write"><img src="./images/common/notice-book.png"></p>
+            </div>
+            <h4 class="tab-btn-2"><a href="#">공지사항</a></h4>
+            <div class="tab-container-2">
+                <ul>
+                    <li><a href="#"> 4월의 책장 한 칸이 열렸습니다.</a><span>2022.03.29.</span></li>
+                    <li><a href="#"> 중고 서적 관련 공지사항</a><span>2022.04.06.</span></li>
+                    <li><a href="#">★필독★ 4월 정기배송 관련 공지사항</a><span>2022.03.29.</span></li>
+                    <li><a href="#"> 택배 회사 변경 공지사항</a><span>2022.04.06.</span></li>
+                    <li><a href="#">★필독★ 3월 정기배송 관련 공지사항</a><span>2022.02.26.</span></li>
+                </ul>
+                <p class="icon-more"><a href="#">more</a></p>
+            </div>
+        </section>
+        <section id="best-product-wrap">
+            <h3 class="sec-tit-1">BEST SELLER</h3>
+            <h4 class="tab-btn-1"><a href="#" class="on">GOODS</a></h4>
+            <div class="tab-container-1">
+                <ul class="best-product-list grid">
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-2.png" alt=""></a></p>
+                        <p class="goods-title">달 무드등</p>
+                        <p class="goods-price">4,500 원</p>
+                    </li>
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-1.png" alt=""></a></p>
+                        <p class="goods-title">도서 다이어리</p>
+                        <p class="goods-price">11,000 원</p>
+                    </li>
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-6.png" alt=""></a></p>
+                        <p class="goods-title">북스탠드</p>
+                        <p class="goods-price">20,000 원</p>
+                    </li>
+                    <li class="grid-item">
+                    <p><a href="#"><img class="goods-photo" src="images/main/main-best-5.png" alt=""></a></p>
+                    <p class="goods-title">북 커버 3set</p>
+                    <p class="goods-price">5,000 원</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- <h4 class="tab-btn-2"><a href="#">BOOK</a></h4>
+            <div class="tab-container-2">
+                <ul class="best-product-list grid">
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-2.png" alt=""></a></p>
+                        <p class="goods-title">달 무드등</p>
+                        <p class="goods-price">4,500 원</p>
+                    </li>
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-1.png" alt=""></a></p>
+                        <p class="goods-title">도서 다이어리</p>
+                        <p class="goods-price">11,000 원</p>
+                    </li>
+                    <li class="grid-item"></li>
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-5.png" alt=""></a></p>
+                        <p class="goods-title">북 커버 3set</p>
+                        <p class="goods-price">5,000 원</p>
+                    </li>
+                    <li class="grid-item">
+                        <p><a href="#"><img class="goods-photo" src="images/main/main-best-6.png" alt=""></a></p>
+                        <p class="goods-title">북스탠드</p>
+                        <p class="goods-price">20,000 원</p>
+                    </li>
+                </ul>
+            </div> -->
+        </section>
+    </div>
+    <!-- //콘테이너 영역 -->
+    <!-- footer -->
+    <div id="footer-wrap">
+        <footer id="footer">
+            <small>Copyright&copy;2022 BBookLife.Company. All Right Reserved</small>
+        </footer>
+    </div>
+</body>
+</html>
